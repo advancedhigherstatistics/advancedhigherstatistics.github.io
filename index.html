@@ -34,6 +34,23 @@ function openTab(evt, tabName) {
 </script>
 
 <script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+
+<script>
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
@@ -42,150 +59,98 @@ document.getElementById("defaultOpen").click();
 
 <body>
 
-<h3 style="color:#916bC2; text-align: center; font--weight: bold;">Higher Applications of Mathematics</h3>
+<h3 style="color:#0972C8; text-align: center; font--weight: bold;">Advanced Higher Statistics</h3>
 
 <!-- tab links -->
 
 <div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Noticeboard')" id="defaultOpen">Noticeboard</button>
-  <button class="tablinks" onclick="openTab(event, 'Modelling')">Modelling</button>
-  <button class="tablinks" onclick="openTab(event, 'Statistics')">Statistics</button>
-  <button class="tablinks" onclick="openTab(event, 'Finance')">Finance</button>
-  <button class="tablinks" onclick="openTab(event, 'Planning')">Planning</button>
-  <button class="tablinks" onclick="openTab(event, 'Excel')">Excel</button>
+  <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Home</button>
+  <button class="tablinks" onclick="openTab(event, 'Lessons')">Lessons</button>
+  <button class="tablinks" onclick="openTab(event, 'Textbook')">Textbook</button>
   <button class="tablinks" onclick="openTab(event, 'RStudio')">RStudio</button>
-  <button class="tablinks" onclick="openTab(event, 'Homework')">Homework</button>
-  <button class="tablinks" onclick="openTab(event, 'Project')">Project</button>
   <button class="tablinks" onclick="openTab(event, 'Revision')">Revision</button>
+  <button class="tablinks" onclick="openTab(event, 'Exams')">Exams</button>
+  <button class="tablinks" onclick="openTab(event, 'Links')">Links</button>
 </div>
 
 <!-- tab content -->
 
 <!-- Tab content -->
-<div id="Noticeboard" style="display: block;" class="tabcontent">
+<div id="Home" style="display: block;" class="tabcontent">
 
-<p>This webpage has been created to host resources to support the <strong>Higher Applications of Mathematics</strong> course.<br>Resources will be added on a regular basis and the course progresses.</p>
+<p>This webpage has been created to host resources to support the <strong>Advanced Higher Statistics</strong> course.<br>Resources are being added on a regular basis.</p>
 
 <p>Please <strong>click on a tab above</strong> to explore.</p>
-  
-</div>
-
-<div id="Modelling" style="display: none;" class="tabcontent">
-
-<p>Use the summaries and resources below to revise and catch up on any missed work.</p>
-
-<hr>
-
-<h3>Chapter 1: An Introduction to Mathematical Modelling</h3>
-
-<p>The introduction page includes:</p>
-
-<ul>
-  <li>Knowing the difference between <strong>accuracy</strong> and <strong>precision</strong>.</li>
-</ul>
-
-<p><a href="happs/modelling/010note.pdf" target="_blank"><button class="download" target="_blank" rel="noopener noreferrer"> Introduction </button></a><p>
-
-<hr>
-
-<h4>1.1 Systematic Estimation</h4>
-
-<ul>
-  <li>Making <strong>estimations</strong> by choosing suitable approximations needed for calculations.</li>
-  <li>Communicating clearly which <strong>assumptions</strong> were made.</li>
-</ul>
-
-<p>
-  <a href="happs/modelling/011note.pdf" target="_blank"><button class="download" target="_blank" rel="noopener noreferrer"> Note </button></a>
-</p>
-
-<hr>
-
-<h4>1.2 Modelling Relationships using Graphs</h4>
-
-<ul>
-  <li>Identifying <strong>independent variables</strong> and <strong>response variables</strong>.</li>
-  <li>Identifying <strong>appropriate graphs</strong> to model a relationship between variables.</li>
-  <li><strong>Drawing</strong> a possible graph.</li>
-</ul>
-
-<p>
-  <a href="happs/modelling/012note.pdf" target="_blank"><button class="download" target="_blank" rel="noopener noreferrer"> Note </button></a>
-</p>
-
-<hr>
-
-<h4>1.3 Linear Relationships</h4>
-
-<ul>
-  <li>Recognising linear relationships as graphs which form a <strong>straight line</strong>.</li>
-  <li>Identifying the <strong>constant rate of change</strong> and <strong>starting value</strong> from the equation.</li>
-  <li>Using the <strong>graph</strong> to make a prediction.</li>
-  <li>Using the <strong>equation</strong> to make a prediction.</li>
-</ul>
-
-<p>
-  <a href="happs/modelling/013note.pdf" target="_blank"><button class="download" target="_blank" rel="noopener noreferrer"> Note </button></a>
-</p>
-
-<hr>
-
-<h4>1.4 Quadratic Relationships</h4>
-
-<ul>
-  <li></li>
-</ul>
-
-<p>
-  <a href="happs/modelling/014note.pdf" target="_blank"><button class="download-old" target="_blank" rel="noopener noreferrer"> Note </button></a>
-</p>
-
-<hr>
-
-<h4>1.5 Exponential Relationships</h4>
-
-<ul>
-  <li></li>
-</ul>
-
-<p>
-  <a href="happs/modelling/015note.pdf" target="_blank"><button class="download-old" target="_blank" rel="noopener noreferrer"> Note </button></a>
-</p>
-
-<hr>
 
 </div>
 
-<div id="Statistics" style="display: none;" class="tabcontent">
+<div id="Lessons" style="display: none;" class="tabcontent">
+
+<p>The resources below correspond to the sections in the <strong>textbook</strong>.</p>
+
+<hr>
+
+<button type="button" class="collapsible">Open Section 1</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button type="button" class="collapsible">Open Section 2</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button type="button" class="collapsible">Open Section 3</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">1 Exploratory Data Analysis</button>
+
+<h4>1.1 Types of Data</h4>
+
+<h4>1.2 Displaying Data</h4>
+
+<h4>1.3 Tables, Figures and Output</h4>
+
+<h4>1.4 Population Parameters and Sample Statistics</h4>
+
+<h4>1.5 Measures of Location and Spread</h4>
+
+<h4>1.6 Outliers and Fences</h4>
+
+<h4>1.7 Describing the Shapes of Distributions</h4>
+
+<h4>1.8 Comparing Distributions</h4>
 
 </div>
 
-<div id="Finance" style="display: none;" class="tabcontent">
-  
-</div>
+<div id="Textbook" style="display: none;" class="tabcontent">
 
-<div id="Planning" style="display: none;" class="tabcontent">
-  
-</div>
+<p>Coming soon.</p>
 
-<div id="Excel" style="display: none;" class="tabcontent">
-  
 </div>
 
 <div id="RStudio" style="display: none;" class="tabcontent">
-  
-</div>
 
-<div id="Homework" style="display: none;" class="tabcontent">
-  
-</div>
-
-<div id="Project" style="display: none;" class="tabcontent">
+<p>Coming soon.</p>
 
 </div>
 
 <div id="Revision" style="display: none;" class="tabcontent">
-  
+
+<p>Coming soon.</p>
+
+</div>
+
+<div id="Exams" style="display: none;" class="tabcontent">
+
+<p>Coming soon.</p>
+
+</div>
+
+<div id="Links" style="display: none;" class="tabcontent">
+
+<p>Coming soon.</p>
+
 </div>
 
 </body>

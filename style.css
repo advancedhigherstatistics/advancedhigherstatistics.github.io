@@ -1,16 +1,16 @@
 :root {
   --main-bg-colour: #feffff;
-  --tab-bg-colour: #f2d5f5;
-  --tab-bg-selected: #916bC2b;
-  --tab-text-colour: #916bC2;
+  --tab-bg-colour: #def2f1;
+  --tab-bg-selected: #0972C8;
+  --tab-text-colour: #0972C8;
   --tab-text-hover: #feffff;
-  --button-bg-colour: #916bC2;
+  --button-bg-colour: #0972C8;
   --button-bg-colour-old: #aaaaaa;
-  --button-bg-colour-past: #CF9BD4;
+  --button-bg-colour-past: #BBDFFC;
   --button-text-colour: #feffff;
   --button-bg-hover: #17252a;
-  --heading: #916bC2;
-  --link: #916bC2;
+  --heading: #0972C8;
+  --link: #0972C8;
   --link-hover: #17252a;
   --tab-text-colour: #feffff;
 }
@@ -33,7 +33,7 @@
   padding: 12px 16px;
   transition: 0.3s;
   color: #feffff;
-  font-size: 12pt;
+  font-size: 14pt;
 }
 
 
@@ -57,7 +57,7 @@
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #916bC2;
+  background-color: #0972C8;
 }
 
 
@@ -117,7 +117,7 @@
   /* Hack to improve aliasing on mobile/tablet devices */
 }
 .hvr-border-fade:hover, .hvr-border-fade:focus, .hvr-border-fade:active {
-  box-shadow: inset 0 0 0 4px #916bC2, 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0 0 4px #0972C8, 0 0 1px rgba(0, 0, 0, 0);
   /* Hack to improve aliasing on mobile/tablet devices */
 }
 
@@ -128,6 +128,7 @@
 body {
   font-family: sans-serif;
   font-size: 18px;
+  margin: 24px;
 }
 
 table {
@@ -170,7 +171,7 @@ td {
 }
 
 .topnav a.active {
-  background-color: #916bC2;
+  background-color: #0972C8;
   color: white;
 }
 
@@ -187,7 +188,7 @@ td {
 }
 
 .accordion {
-  background-color: #eee;
+  background-color: white;
   color: #444;
   cursor: pointer;
   padding: 8px;
@@ -196,11 +197,11 @@ td {
   text-align: left;
   outline: none;
   font-size: 18px;
-  transition: 0.8s;
+  transition: 0.5s;
 }
 
 .active, .accordion:hover {
-  background-color: #ccc;
+  background-color: #BBDFFC;
 }
 
 .panel {
@@ -208,6 +209,32 @@ td {
   display: none;
   background-color: white;
   overflow: hidden;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
 }
 
 /* Responsive navigation menu (for mobile devices) */
@@ -270,7 +297,7 @@ Retrieved 2026-02-09, License - CC BY-SA 4.0
 */
 
 a.button {
-    color: #916bC2;
+    color: #0972C8;
     background-color: none;
     text-decoration: none;
 }
