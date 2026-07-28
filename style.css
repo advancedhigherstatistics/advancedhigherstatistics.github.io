@@ -252,3 +252,30 @@ a.button {
     background-color: none;
     text-decoration: none;
 }
+
+.collapsible {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: #477aac;
+  text-align: left;
+  outline: black;
+  font-size: 18px;
+}
+
+.active, .collapsible:hover {
+  background-color: #aaaaaa;
+}
+
+
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #477aac;
+}
+

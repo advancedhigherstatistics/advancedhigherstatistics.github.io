@@ -42,10 +42,10 @@ for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
     var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
     } else {
-      content.style.display = "block";
+      content.style.maxHeight = content.scrollHeight + "px";
     }
   });
 }
@@ -55,6 +55,7 @@ for (i = 0; i < coll.length; i++) {
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
+
 
 </head>
 
@@ -82,6 +83,15 @@ document.getElementById("defaultOpen").click();
 <p>This webpage has been created to host resources to support the <strong>Advanced Higher Statistics</strong> course.<br>Resources are being added on a regular basis.</p>
 
 <p>Please <strong>click on a tab above</strong> to explore.</p>
+
+<button type="button" class="collapsible">Open Collapsible1</button>
+<div class="content">
+  <p>Hi</p>
+</div>
+<button type="button" class="collapsible">Open Collapsible2</button>
+<div class="content">
+  <p>Hello</p>
+</div>
 
 </div>
 
