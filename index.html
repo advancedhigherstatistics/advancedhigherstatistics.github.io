@@ -8,54 +8,12 @@
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="/favicon.ico" sizes="32x32">
 <link rel="icon" href="/icon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
-<!-- tabs script -->
-
-<script>
-function openTab(evt, tabName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-</script>
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
-  });
-}
-</script>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
 <script>
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 </script>
-
 
 </head>
 
@@ -63,7 +21,7 @@ document.getElementById("defaultOpen").click();
 
 <h3 style="color:#477aac; text-align: center; font--weight: bold;">advancedhigherstatistics.github.io</h3>
 
-<!-- tab links -->
+<!-- Tab links -->
 
 <div class="tab">
   <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Home</button>
@@ -75,23 +33,13 @@ document.getElementById("defaultOpen").click();
   <button class="tablinks" onclick="openTab(event, 'Links')">Links</button>
 </div>
 
-<!-- tab content -->
-
 <!-- Tab content -->
+
 <div id="Home" style="display: block;" class="tabcontent">
 
 <p>This webpage has been created to host resources to support the <strong>Advanced Higher Statistics</strong> course.<br>Resources are being added on a regular basis.</p>
 
 <p>Please <strong>click on a tab above</strong> to explore.</p>
-
-<button type="button" class="collapsible">Open Collapsible1</button>
-<div class="content">
-  <p>Hi</p>
-</div>
-<button type="button" class="collapsible">Open Collapsible2</button>
-<div class="content">
-  <p>Hello</p>
-</div>
 
 </div>
 
@@ -130,6 +78,8 @@ document.getElementById("defaultOpen").click();
 <p>Coming soon.</p>
 
 </div>
+
+<script src="tabscript.js"></script>
 
 </body>
 
