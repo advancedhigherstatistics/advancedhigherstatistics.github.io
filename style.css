@@ -1,16 +1,16 @@
 :root {
   --main-bg-colour: #feffff;
   --tab-bg-colour: #def2f1;
-  --tab-bg-selected: #477aac;
-  --tab-text-colour: #477aac;
+  --tab-bg-selected: #0068b4;
+  --tab-text-colour: #0068b4;
   --tab-text-hover: #feffff;
-  --button-bg-colour: #477aac;
+  --button-bg-colour: #0068b4;
   --button-bg-colour-old: #aaaaaa;
   --button-bg-colour-past: #BBDFFC;
   --button-text-colour: #feffff;
   --button-bg-hover: #17252a;
-  --heading: #477aac;
-  --link: #477aac;
+  --heading: #0068b4;
+  --link: #0068b4;
   --link-hover: #17252a;
   --tab-text-colour: #feffff;
 }
@@ -57,7 +57,7 @@
 
 /* Create an active/current tablink class */
 .tab button.active {
-  background-color: #477aac;
+  background-color: #0068b4;
 }
 
 
@@ -117,7 +117,7 @@
   /* Hack to improve aliasing on mobile/tablet devices */
 }
 .hvr-border-fade:hover, .hvr-border-fade:focus, .hvr-border-fade:active {
-  box-shadow: inset 0 0 0 4px #477aac, 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: inset 0 0 0 4px #0068b4, 0 0 1px rgba(0, 0, 0, 0);
   /* Hack to improve aliasing on mobile/tablet devices */
 }
 
@@ -171,7 +171,7 @@ td {
 }
 
 .topnav a.active {
-  background-color: #477aac;
+  background-color: #0068b4;
   color: white;
 }
 
@@ -248,7 +248,7 @@ Retrieved 2026-02-09, License - CC BY-SA 4.0
 */
 
 a.button {
-    color: #477aac;
+    color: #0068b4;
     background-color: none;
     text-decoration: none;
 }
@@ -259,7 +259,7 @@ a.button {
   cursor: pointer;
   padding: 18px;
   width: 100%;
-  border: #477aac;
+  border: #0068b4;
   text-align: left;
   outline: black;
   font-size: 18px;
@@ -276,6 +276,6 @@ a.button {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #477aac;
+  background-color: #0068b4;
 }
 
